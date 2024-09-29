@@ -80,7 +80,7 @@ Nexus T1 AI stands at the forefront of HoloFi technology, providing a robust pla
 
 <p>**FOUNDER: LUCAS JANAURIO DO NASCIMENTO**</p>
 
-![Holo Ether Logo](A.JPEG)
+![Holo Ether Logo](Z.JPEG)
 
 ---
 
