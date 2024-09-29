@@ -6,52 +6,31 @@
  * of the NSC Inc License Agreement.
  */
 
- package com.nscinc.project;
+ package com.nscinc.project
 
- public class NSC_ABC {
-     
-     private String modelName;
-     private String version;
- 
-     // Construtor
-     public NSC_ABC(String modelName, String version) {
-         this.modelName = modelName;
-         this.version = version;
-     }
+ class NSC_ABC(private var modelName: String, private var version: String) {
  
      // Método de geração
-     public String generate(String input) {
+     fun generate(input: String): String {
          // Lógica para geração com base no modelo NSC_ABC
-         return "Generated output based on: " + input;
+         return "Generated output based on: $input"
      }
  
      // Exemplo de diálogo baseado no modelo
-     public void dialog() {
-         System.out.println("Dialog with NSC_ABC model " + modelName + " version " + version);
+     fun dialog() {
+         println("Dialog with NSC_ABC model $modelName version $version")
      }
  
-     // Getters e Setters
-     public String getModelName() {
-         return modelName;
-     }
+     // Getters e Setters (não são necessários, pois estamos usando propriedades)
  
-     public void setModelName(String modelName) {
-         this.modelName = modelName;
-     }
- 
-     public String getVersion() {
-         return version;
-     }
- 
-     public void setVersion(String version) {
-         this.version = version;
-     }
- 
-     public static void main(String[] args) {
-         NSC_ABC nscModel = new NSC_ABC("NSC-ABC", "1.0");
-         nscModel.dialog();
-         String output = nscModel.generate("Teste de entrada");
-         System.out.println(output);
+     companion object {
+         @JvmStatic
+         fun main(args: Array<String>) {
+             val nscModel = NSC_ABC("NSC-ABC", "1.0")
+             nscModel.dialog()
+             val output = nscModel.generate("Teste de entrada")
+             println(output)
+         }
      }
  }
  
